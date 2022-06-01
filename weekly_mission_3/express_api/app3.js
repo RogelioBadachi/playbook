@@ -17,6 +17,12 @@ app.get('/', (req,res) => {
     const explorers = [explorer1, explorer2, explorer3, explorer4, explorer5]
     res.status(200).json(explorers)
 })
+app.get('/:organizacion', (req,res) => {
+    console.log(`Api Explorers GET request ${new Date()}`);
+    const explorer1 = {organizacion: "Team Seas"};
+    console.log(`Getting explorer with id ${req.params.organizacion}`);
+    res.status(200).json(explorer1)
+})
 
 // Con esto inicializamos esta app
 app.listen(port, () => {
