@@ -19,9 +19,9 @@ app.get('/', (req,res) => {
 })
 app.get('/:organizacion', (req,res) => {
     console.log(`Api Explorers GET request ${new Date()}`);
-    const explorer1 = {organizacion: "Team Seas"};
     console.log(`Getting explorer with id ${req.params.organizacion}`);
-    res.status(200).json(explorer1)
+    const explorer1 = {organizacion: "Team Seas"};
+    res.status(200).json(explorer1.organizacion)
 })
 
 // Con esto inicializamos esta app
